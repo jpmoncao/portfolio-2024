@@ -1,13 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 :root {
-  --gunmental: #2C363F;
+  --gunmental-gray: #131c2c;
+  --gunmental: #081121;
+  --gunmental-shadow: #0811214b;
   --antiquewhite: #fff5e9;
-  --persiangreen: #17A398;
-  --aquamarine: #00F0B5;
-  --mint: #4ef8ce;
+  --persiangreen: #234F95;
+  --aquamarine: #277AFF;
+  --aquamarine-shadow: #277AFFa8;
+  --mint: #66C3FF;
   --coquelicot: #F34213;
-  --aqua-fade: linear-gradient(180deg, #00F0B5, #17A398);
+  --aqua-fade: linear-gradient(180deg, var(--aquamarine), var(--persiangreen));
 
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

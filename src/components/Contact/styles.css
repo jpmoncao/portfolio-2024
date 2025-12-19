@@ -66,6 +66,7 @@
     min-width: 80%;
     line-height: 1.4em;
 }
+
 /* 
 .Contact .info .contact-aside article img {
     filter: invert(1); 
@@ -141,7 +142,7 @@
     color: var(--antiquewhite);
     transform: scale(105%);
 
-    box-shadow: 0px 0px 16px #4bdfbaa8;
+    box-shadow: 0px 0px 16px var(--aquamarine-shadow);
     transition-duration: .4s;
 }
 

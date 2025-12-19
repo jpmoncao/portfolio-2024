@@ -8,6 +8,7 @@
 
     min-height: calc(75vh - 3rem * 2);
     padding: 3rem 1rem;
+    background-color: var(--gunmental-gray);
 }
 
 .Skills article.text {
@@ -24,7 +25,7 @@
     font-size: 4rem;
     font-weight: 800;
     text-align: center;
-    text-shadow: 0px 0px 32px #2c363f4b;
+    text-shadow: 0px 0px 32px var(--gunmental-shadow);
     line-height: 0.8em;
     max-width: 100%;
     height: auto;
@@ -119,7 +120,7 @@
 
 @media screen and (max-width: 1023px) {}
 
-@media screen and (max-width: 767px) {  
+@media screen and (max-width: 767px) {
     .Skills {
         padding-top: 3rem;
     }

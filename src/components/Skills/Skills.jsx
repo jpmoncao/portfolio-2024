@@ -23,7 +23,7 @@ export default function Skills() {
     }, []);
 
     return (
-        <section className='Skills' style={{ background: "#2C363F" }}>
+        <section className='Skills'>
             <article className='text'>
                 <h1>{'<skills />'}</h1>
             </article>
