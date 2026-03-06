@@ -1,0 +1,244 @@
+.Editor {
+  padding: 2rem 4rem 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
+
+.editor-window {
+  width: 100%;
+  max-width: 900px;
+  background: #1e1e1e;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Title bar estilo Cursor/VSCode */
+.editor-titlebar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 1rem;
+  background: #323233;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.titlebar-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.titlebar-btn {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.titlebar-btn.close {
+  background: #ff5f57;
+}
+
+.titlebar-btn.minimize {
+  background: #febc2e;
+}
+
+.titlebar-btn.maximize {
+  background: #28c840;
+}
+
+.titlebar-title {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-left: 1rem;
+}
+
+/* Tabs estilo Cursor */
+.editor-tabs {
+  display: flex;
+  background: #252526;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 0 0.5rem 0 0;
+}
+
+.editor-tab {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.875rem;
+  font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.editor-tab:hover {
+  color: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.editor-tab.active {
+  background: #1e1e1e;
+  color: var(--antiquewhite);
+  border-bottom-color: var(--aquamarine);
+}
+
+.tab-icon {
+  font-size: 0.7rem;
+  color: var(--aquamarine);
+  text-transform: lowercase;
+}
+
+/* Área de conteúdo */
+.editor-content {
+  display: flex;
+  min-height: 320px;
+  font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.editor-content--markdown {
+  position: relative;
+  padding: 1.5rem 2rem;
+  background: #1e1e1e;
+}
+
+.content-copy-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.content-copy-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--antiquewhite);
+}
+
+.content-markdown {
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 100%;
+}
+
+.content-markdown blockquote {
+  margin: 0 0 1rem;
+  padding: 0 0 0 1rem;
+  border-left: 4px solid var(--aquamarine);
+  color: var(--mint);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.content-markdown ul {
+  margin: 0;
+  padding-left: 1.5rem;
+  list-style: none;
+}
+
+.content-markdown li {
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+.content-markdown li::marker {
+  content: none;
+}
+
+.content-markdown li {
+  padding-left: 0;
+}
+
+.content-markdown p {
+  margin: 0 0 0.75rem;
+}
+
+.content-markdown p:last-child {
+  margin-bottom: 0;
+}
+
+.content-markdown strong {
+  color: var(--antiquewhite);
+  font-weight: 600;
+}
+
+.content-markdown a {
+  color: var(--mint);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.content-markdown a:hover {
+  color: var(--aquamarine);
+  text-decoration: underline;
+}
+
+.content-line-numbers {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1rem 1rem 1.5rem;
+  background: #252526;
+  color: rgba(255, 255, 255, 0.3);
+  text-align: right;
+  user-select: none;
+}
+
+.content-line-numbers span {
+  min-height: 1.6em;
+}
+
+.content-code {
+  flex: 1;
+  margin: 0;
+  padding: 1rem 1.5rem;
+  overflow-x: auto;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.content-code code {
+  white-space: pre;
+  font-family: inherit;
+}
+
+/* Syntax highlighting básico */
+.content-code .comment {
+  color: #6a9955;
+}
+
+@media screen and (max-width: 1023px) {
+  .Editor {
+    padding: 1.5rem 2rem 3rem;
+  }
+
+  .editor-window {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .Editor {
+    padding: 1rem;
+  }
+
+  .editor-tab {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.75rem;
+  }
+
+  .content-code,
+  .content-line-numbers {
+    font-size: 0.75rem;
+  }
+}
